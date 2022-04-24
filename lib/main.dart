@@ -59,12 +59,18 @@ class MiCardPage extends StatelessWidget {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                Container(height: 8.0,),
-                ContactColumn(
+                SizedBox(
+                  height: 20.0,
+                  width: 150.0,
+                  child: Divider(
+                    color: Colors.teal.shade100,
+                  ),
+                ),
+                ContactTile(
                   icon: Icons.call,
                   text: '+44 123 4567 8901',
                 ),
-                ContactColumn(
+                ContactTile(
                   icon: Icons.email,
                   text: 'lawrence.cendana@gmail.com',
                 ),
@@ -77,11 +83,11 @@ class MiCardPage extends StatelessWidget {
   }
 }
 
-class ContactColumn extends StatelessWidget {
+class ContactTile extends StatelessWidget {
   final IconData icon;
   final String text;
 
-  const ContactColumn({Key key, this.icon, this.text}) : super(key: key);
+  const ContactTile({Key key, this.icon, this.text}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -92,23 +98,19 @@ class ContactColumn extends StatelessWidget {
       ),
       width: double.infinity,
       margin: EdgeInsets.fromLTRB(12.0, 16.0, 12.0, 0.0),
-      padding: EdgeInsets.all(12.0),
-      child: Row(
-        children: [
-          Icon(
-            this.icon,
-            color: Colors.green,
-            size: 18.0,
+      child: ListTile(
+        leading: Icon(
+          this.icon,
+          color: Colors.green,
+          size: 24.0,
+        ),
+        title: Text(
+          '$text',
+          style: TextStyle(
+            fontSize: 14.0,
+            fontWeight: FontWeight.w400,
           ),
-          Container(width: 24.0,),
-          Text(
-            '$text',
-            style: TextStyle(
-              fontSize: 14.0,
-              fontWeight: FontWeight.w400,
-            ),
-          )
-        ],
+        ),
       ),
     );
   }
