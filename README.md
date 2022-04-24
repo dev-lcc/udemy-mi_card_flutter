@@ -27,5 +27,8 @@ Mi Card is a personal business card. Imagine every time you wanted to give someo
 
 ![End Banner](https://github.com/londonappbrewery/Images/blob/master/readme-end-banner.png)
 
-## Layout Challenge Specs
+## MiCard Challenge #1
 ![Layout-Challenge-Specs](https://user-images.githubusercontent.com/6966201/164969846-5fcb1b7a-ce53-40d8-b13c-1a5117e162d1.png)
+
+## MiCard Challenge #2
+![flutter_screenshot](https://user-images.githubusercontent.com/6966201/164976323-e646467c-5b99-4c88-a401-ba4054b687af.png)
